@@ -27,16 +27,16 @@ Route::get('/', function () {
 Auth::routes();
 
 /** Admin Auth */
-Route::get('/admin/login', [LoginController::class, 'showlogin']);
+Route::get('/admin/login', [LoginController::class, 'showlogin'])->name('adminlogin');
 Route::post('/admin/login', [LoginController::class, 'adminLogin'])->name('admin.login');
-Route::get('/admin/register', [RegisterController::class, 'showregister']);
+Route::get('/admin/register', [RegisterController::class, 'showregister'])->name('adminregister');
 Route::post('/admin/register', [RegisterController::class, 'adminregister'])->name('admin.register');
 Route::post('/admin/logout', [LoginController::class, 'adminLogout'])->name('admin.logout');
 
 /** User Auth */
 Route::get('/user/login', [UserLoginController::class, 'showlogin'])->name('userlogin');
 Route::post('/user/login', [UserLoginController::class, 'userlogin'])->name('user.login');
-Route::get('/user/register', [UserRegisterController::class, 'showregister']);
+Route::get('/user/register', [UserRegisterController::class, 'showregister'])->name('userregister');
 Route::post('/user/register', [UserRegisterController::class, 'userregister'])->name('user.register');
 Route::post('/user/logout', [UserLoginController::class, 'userLogout'])->name('user.logout');
 

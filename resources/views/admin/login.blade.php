@@ -34,6 +34,9 @@
                 <div class="mt-3">
                   <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" value="SIGN IN">
                 </div>
+                <div class="text-center mt-4 font-weight-light">
+                  Don't have an account? <a href="{{ route('adminregister') }}" class="text-primary">Register</a>
+                </div>
               </form>
             </div>
           </div>
